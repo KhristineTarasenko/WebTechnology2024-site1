@@ -1,0 +1,253 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    color: #5c3d2e;
+    background-color: #f8f4e6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Навигация */
+.navbar {
+    background-color: #e2b07e;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    color: #5c3d2e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links a {
+    color: #5c3d2e;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+}
+
+.navbar .nav-links .active {
+    color: #d97d4e;
+    border-bottom: 2px solid #d97d4e;
+}
+
+/* Размер и стиль для иконок в навигации */
+.navbar .icon {
+    width: 24px;   /* Уменьшаем ширину */
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Стили для миниатюрных изображений */
+.thumbnail {
+    cursor: pointer;
+    border: 2px solid #8C5B3E;
+    border-radius: 5px;
+    margin: 10px;
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для таблицы на странице достопримечательностей */
+.attractions-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #5c3d2e;
+    text-align: left;
+    position: relative;
+    border: 1px solid #ddd;
+}
+.attractions-table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('table-bg.jpg'); /* Фоновое изображение для таблицы */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.attractions-table td,
+.attractions-table th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Фон в ячейке для парка Ханган */
+.background-image-cell {
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Устанавливаем конкретные стили для изображений в index.html */
+.index-page .section-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Стили для главного баннера на начальной странице */
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-bg {
+    background-image: url('seoul-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(6px) brightness(0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #f8f4e6;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #f8f4e6;
+}
+
+/* О Сеуле */
+.about {
+    padding: 2em;
+    text-align: center;
+}
+
+.about h2 {
+    color: #5c3d2e;
+    font-size: 2em;
+}
+
+.about-description {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #7a5230;
+    text-align: justify;
+}
+
+/* Карточки секций */
+.seoul-info-section {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.section-card {
+    width: 30%;
+    text-align: center;
+    background-color: #f5e3d0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-card h3 {
+    color: #d97d4e;
+}
+
+.section-card p {
+    color: #5c3d2e;
+}
+
+/* Контакты */
+.contacts {
+    padding: 2em;
+    background-color: #f0d9c3;
+    text-align: center;
+}
+
+.contacts h2 {
+    color: #5c3d2e;
+}
+
+.contacts p a {
+    color: #d97d4e;
+    text-decoration: none;
+}
+
+.contacts p a:hover {
+    color: #b96539;
+}
+
+/* Нижний колонтитул */
+footer {
+    background-color: #e2b07e;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+/* Стили для блока с изображениями достопримечательностей */
+.attraction-images {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+.attraction-image {
+    position: relative;
+    width: 150px;
+    height: auto;
+}
+
+.attraction-image img {
+    width: 100%; /* Изображения будут одинакового размера */
+    height: auto;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 3px 5px;
+    font-size: 0.9em;
+    visibility: hidden; /* Скрыто по умолчанию */
+}
+
+.attraction-image:hover .tooltip {
+    visibility: visible; /* Появляется при наведении */
+}
