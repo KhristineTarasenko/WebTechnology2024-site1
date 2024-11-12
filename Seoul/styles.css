@@ -74,7 +74,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('table-bg.jpg'); /* Фоновое изображение для таблицы */
+    background-image: url('table-bg.JPG'); /* Фоновое изображение для таблицы */
     background-size: cover;
     background-position: center;
     opacity: 0.9;
@@ -116,7 +116,7 @@ body {
 }
 
 .hero-bg {
-    background-image: url('seoul-bg.jpg');
+    background-image: url('seoul-bg.JPG');
     background-size: cover;
     background-position: center;
     position: absolute;
