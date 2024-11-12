@@ -1,56 +1,51 @@
 /* Основные стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* без засечек */
     color: #5c3d2e;
     background-color: #f8f4e6;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* внешний отступ */
+    padding: 0; /* внутренний отступ */
+
 }
 
 /* Навигация */
 .navbar {
-    background-color: #e2b07e;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
+    background-color: #e2b07e;    
     align-items: center;
+    padding: 1em; /* внутренний отступ размером в со всех сторон элемента */
 }
 
 .navbar .logo {
-    font-size: 1.5em;
+    font-size: 1.5em; /* в 1,5 раза больше остальных шрифтов в навигации */
     color: #5c3d2e;
     font-weight: bold;
-    text-decoration: none;
 }
 
 .navbar .nav-links a {
     color: #5c3d2e;
     text-decoration: none;
-    margin: 0 1em;
     font-weight: bold;
 }
 
 .navbar .nav-links .active {
     color: #d97d4e;
-    border-bottom: 2px solid #d97d4e;
+    border-bottom: 2px solid #d97d4e; 
 }
 
-/* Размер и стиль для иконок в навигации */
 .navbar .icon {
-    width: 24px;   /* Уменьшаем ширину */
+    width: 24px; 
     height: auto;
     vertical-align: middle;
 }
 
-/* Стили для миниатюрных изображений */
+
 .thumbnail {
     cursor: pointer;
     border: 2px solid #8C5B3E;
-    border-radius: 5px;
+    border-radius: 5px; /* скругленние */
     margin: 10px;
     width: 100px;
     height: auto;
-    transition: transform 0.2s ease;
 }
 
 .thumbnail:hover {
@@ -61,30 +56,29 @@ body {
 .attractions-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.85);
     color: #5c3d2e;
-    text-align: left;
-    position: relative;
-    border: 1px solid #ddd;
+    text-align: center;
+    position: relative; /* делает элемент позиционированным */
+    border: 1px solid #9b7979;
 }
 .attractions-table::before {
-    content: "";
-    position: absolute;
+    content: ""; /* псевдоэлемент для размещения фонового изображения */
+    position: absolute; /* элемент независимо от других элементов на странице */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-image: url('table-bg.JPG'); /* Фоновое изображение для таблицы */
-    background-size: cover;
+    background-size: cover; /* Масштабирует фоновое изображение относительно псевдоэлемента обрезая при необходимости */
     background-position: center;
-    opacity: 0.9;
-    z-index: -1;
+    opacity: 0.2;
+    z-index: -1; /* располагает фон ниже остальных элементов*/
 }
 
-.attractions-table td,
+.attractions-table td, /* делаем ячейки */
 .attractions-table th {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #9b7979;
 }
 
 /* Фон в ячейке для парка Ханган */
@@ -106,20 +100,19 @@ body {
 
 /* Стили для главного баннера на начальной странице */
 .hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+    position: relative; /* относительное позиционирование для элемента */
+    height: 60vh; /* 60% от видимой части экрана*/
+    display: flex; /* гибкий контейнер чтобы удобнее располагать элементы внутри контейнера*/
+    align-items: center; /* по вертикальной оси */
+    justify-content: center; /* по горизонтальной оси */
     text-align: center;
 }
 
 .hero-bg {
     background-image: url('seoul-bg.JPG');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
+    background-size: cover; /* Масштабирует фоновое изображение обрезая при необходимости */
+    background-position: center; /* Центрирует фоновое изображение относительно элемента */
+    position: absolute; /* элемент независимо от других элементов на странице относительно position*/
     top: 0;
     left: 0;
     width: 100%;
@@ -128,12 +121,12 @@ body {
 }
 
 .hero-content {
-    position: relative;
+    position: relative; /* относительное позиционирование для элемента */
     z-index: 1;
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 2.5em; /*  шрифт увеличен в 2.5 раза */
     color: #f8f4e6;
 }
 
@@ -150,21 +143,21 @@ body {
 
 .about h2 {
     color: #5c3d2e;
-    font-size: 2em;
+    font-size: 2em; /* внутренние отступы со всех сторон*/
 }
 
 .about-description {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; /* центрирован по горизонтали а по бокам распределяются поровну */
     color: #7a5230;
-    text-align: justify;
+    text-align: justify; /*  Выравнивает текст по ширине */
 }
 
 /* Карточки секций */
 .seoul-info-section {
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
+    display: flex; /* Преобразует элемент в гибкий контейнер */
+    justify-content: center; /* по горизонтальной оси */
+    gap: 1.5em; /*  промежуток между соседними элементами в 1.5em */
     margin-top: 2em;
 }
 
@@ -172,9 +165,9 @@ body {
     width: 30%;
     text-align: center;
     background-color: #f5e3d0;
-    padding: 1em;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;  /* отступы картинок */
+
 }
 
 .section-card h3 {
@@ -241,7 +234,7 @@ footer p {
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.75); /* это уровень красного цвета, уровень зелёного цвета,уровень синего цвета, 0.75 — Уровень прозрачности */
     color: white;
     padding: 3px 5px;
     font-size: 0.9em;
